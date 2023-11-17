@@ -1,3 +1,60 @@
 Task
 1. ulangi langkah-langkah demo setup dbt dari 0 sampai bisa membuat model baru !
-2. berikan screenshot di setiap langkah dan hasil dari langkah yang dijalankan !
+2. berikan screenshot di setiap langkah dan hasil dari langkah yang dijalankan ! Terlampir pada folder "lampiran foto"
+
+Langkah-langkah setup DBT:
+
+1. Pertama membuat direktori local. Terlampir pada screenshot dengan nama: 1.png
+
+2. Membuat file dengan nama docker-compose(dot)yml. Kemudian dalam file tersebut dapat diisi dengan code yang sumbernya dari "https://github.com/Immersive-DataEngineer-Resource/dbt-demo/blob/main/docker-compose.yml" dan di save.
+Terlampir pada screenshot dengan nama: 2.png
+
+3. Buka aplikasi docker, kemudian ketikan perintah "docker compose up -d" pada terminal git bash.sebelum menjalankan perintah pastikan sudah masuk ke direktori dimana file docker-compose(dot)yml disimpan.
+Terlampir pada screenshot dengan nama: 3.png
+
+4. Pastikan pada aplikasi docker compose container "dbt-demo" jalan.
+Terlampir pada screenshot dengan nama: 4.png
+
+5. Setup .venv
+Terlampir pada screenshot dengan nama: 5.png
+
+6. Install DBT. Tunggu hingga download selesai
+Terlampir pada screenshot dengan nama: 6.png
+
+7. Untuk memudahkan dalam pengecekan packages apa saja yang sudah diinstall. Perlu dibuat file dengan nama requirements.txt dan install packages pada file requirements(dot)txt. 
+Terlampir pada screenshot dengan nama: 7.png
+
+8. Setup DBT Project dengan mengetikan "dbt init my_project" pada terminal git bash
+Terlampir pada screenshot dengan nama: 8.png
+
+9. Setup DBT Profiles, dengan menjalankan perintah perintah berikut pada terminal git bash:
+- mkdir dbt-profiles
+- touch dbt-profiles/profiles.yml
+- export DBT_PROFILES_DIR=$(pwd)/dbt-profiles
+Terlampir pada screenshot dengan nama: 9.png
+
+10. Kemudian set file profiles(dot)yml dengan code yang tertera pada screenshot dengan nama 10.png
+
+11. Cek koneksi database store di DBeaver
+Terlampir pada screenshot dengan nama: 11.png
+
+12. Membuat table, kolom dan isi dari kolom pada postgresql dengan menginputkan query dari "https://github.com/Immersive-DataEngineer-Resource/dbt-demo/blob/main/init.sql" kemudian jalankan query tersebut.
+Terlampir pada screenshot dengan nama: 12.png
+
+13. Setup DBT Projects.
+Terlampir pada screenshot dengan nama: 13.png
+
+14. Mendefinisikan table. Dengan membuat folder store di dalam folder models dan di dalam folder store dibuat file schema(dot)yml. Yang isi dari file tersebut di dapat dari "https://github.com/Immersive-DataEngineer-Resource/dbt-demo/blob/main/my_project/models/store/schema.yml" kemudian save.
+
+Terlampir pada screenshot dengan nama: 14.png
+
+15. Membuat model. Buat folder store_analytics di dalam folder models. Yang nantinya ada file schema(dot)yml yang sumbernya di dapat dari "https://github.com/Immersive-DataEngineer-Resource/dbt-demo/blob/main/my_project/models/store_analytics/schema.yml" dan daily_sales.sql
+yang sumber codenya di dapat dari "https://github.com/Immersive-DataEngineer-Resource/dbt-demo/blob/main/my_project/models/store_analytics/daily_sales.sql"
+
+16. Jalankan model yang telah dibuat dan test.
+Terlampir hasil pada screenshot dengan nama: 15.png & 16.png 
+
+17. Cek hasil pada postgres di DBeaver
+Terlampir hasil pada screenshot dengan nama: 17.png 
+
+

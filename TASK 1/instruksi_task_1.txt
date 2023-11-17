@@ -1,4 +1,17 @@
-Task
-1. Jelaskan apa itu DBT !
-2. Apa keuntungan menggunakan DBT ?
-3. Jelaskan dependency tree dan versioning pada DBT !
+1. Jelaskan apa itu DBT!
+DBT adalah kepanjangan dari Data Build Tools. DBT sendiri merupakan alat bantu analisis, dan data engineer untuk memindahkan, mentransformasi, dan memuat data ke dalam data warehouse atau data lake. Alat ini dapat membantu untuk mengotomatisasi tugas-tugas seperti:
+- Melakukan sinkronisasi data dari sumber data ke data warehouse / data lake
+- Melakukan transformasi data untuk membersihkan, mengintegerasikan, atau mengubah data
+- Memuat data ke data warehouse atau data lake
+
+2. Apa keuntungan dari DBT?
+- Efisiensi > DTB dapat membantu untuk mengotomatisasi tugas-tugas yang sering dilakukan secara manual, sehingga dapat menghemat waktu dan tenaga
+- Akurasi > DBT dapat membantu untuk memastikan bahwa data yang dimuat ke data warehouse atau data lake akuran dan konsisten
+- Produktivitas > DBT dapat membantu untuk meningkatkan produktivitas tim data  dengan memungkinkan mereka untuk fokus pada tugas-tugas yang lebih strategis
+- Fleksibilitas: DBT dapat disesuaikan untuk memenuhi kebutuhan spesifik bisnis
+
+3. Jelaskan dependency tree dan versioning pada DBT!
+
+Dependency Tree pada DBT merupakan diagram yang menunjukan hubungan antara berbagai komponen yang diperlukan untuk membangun data pipeline. 
+
+Versioning pada DBT berarti pemberian versi pada data, data pipeline dan kode sumber. Versioning dapat membantu melacak perubahan yang dilakukan pada data dan data pipeline, serta untuk mengembalikan data pipeline ke versi sebelumnyajika diperlukan

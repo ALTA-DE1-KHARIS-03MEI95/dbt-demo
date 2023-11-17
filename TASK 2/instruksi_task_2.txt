@@ -5,3 +5,37 @@ tabel yang menampilkan kolom berikut :
 	- brand_name
 	- qty_sold
 	- revenue
+
+select * from brands b;
+select * from order_details od;
+select * from products p;
+select * from orders o;
+
+with sales as (
+	select 
+		p."name" as product_name
+		, o.order_date
+		, od.quantity
+		, b."name" as brand_name
+		, p.price 
+	from orders o
+	join order_details od 
+		on o.order_id = od.order_id 
+	join products p 
+		on od.product_id = p.product_id 
+	join brands b 
+		on p.brand_id = b.brand_id 
+)
+
+, detail_sales as(
+	select
+		date(order_date) as "Order Date"
+		, brand_name as "Brand Name"
+		, product_name as "Product Name"
+		, sum(quantity) as "Total Quantity"
+		, sum(quantity*price) as "Total Sales"
+	from sales
+	group by 1, 2, 3
+)
+
+select * from detail_sales order by 3 asc;

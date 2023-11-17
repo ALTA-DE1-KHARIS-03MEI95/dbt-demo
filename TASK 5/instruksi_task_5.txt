@@ -6,9 +6,11 @@ Task
     - country (based on normalized_customer_phone)
         - If the phone number is started with 62, the country should be Indonesia
         - If the phone number is started with 91, the country should be India
+Sql, schema and photo terlampir pada folder store__stg
 
 2. Base on stg_order_details, make another model named fct_per_country_daily_sales containing per country daily sales:
     - country
     - order_date
     - total_quantity
     - total_revenue
+Sql, schema and photo terlampir pada folder store__stg
